@@ -1,0 +1,138 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e0022;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #ff33ff;
+    text-shadow: 0 0 10px #ff33ff, 0 0 20px #ff33ff;
+  }
+  
+  .game-container {
+    text-align: center;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    background-color: #330033;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff66ff;
+    box-shadow: 0 0 10px #ff33ff;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .cell:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff66ff, 0 0 30px #ff99ff;
+  }
+  
+  .cell.x {
+    color: #33ccff;
+    text-shadow: 0 0 10px #33ccff, 0 0 20px #33ccff;
+  }
+  
+  .cell.o {
+    color: #66ffd1;
+    text-shadow: 0 0 10px #66ffd1, 0 0 20px #66ffd1;
+  }
+  
+  .reset-btn {
+    background-color: #501050;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px #501050;
+  }
+  
+  .reset-btn:hover {
+    background-color: #ff99ff;
+    box-shadow: 0 0 20px #ff99ff, 0 0 30px #ff99ff;
+  }
+  
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  .modal-content {
+    width: 19%;
+    height: 19%;
+    background-color: #330033;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px #ff33ff, 0 0 30px #ff33ff;
+    color: #fff;
+    font-size: 1.5rem;
+    animation: pop-in 0.3s ease-in-out;
+  }
+  
+  #resultMessage {
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #e96dfc, 0 0 20px #e96dfc;
+  }
+  
+  .close-btn {
+    background-color: #501050;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px #501050;
+  }
+  
+  .close-btn:hover {
+    background-color: #ff99ff;
+    box-shadow: 0 0 20px #ff99ff, 0 0 30px #ff99ff;
+  }
+  
+  /* Modal animation */
+  @keyframes pop-in {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
